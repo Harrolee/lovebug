@@ -8,6 +8,7 @@ import {BOX_SIZE, DEVICE_HEIGHT, DEVICE_WIDTH, ROAD_SIZE} from './Constants';
 import React, {useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import Box from './renderers/Box';
+import VoiceRecorder from './components/VoiceRecord';
 
 export function World() {
   const [gameSetupStatus, setGameSetupStatus] = useState(true);
@@ -57,6 +58,7 @@ export function World() {
           <View style={styles.scoreContainer}>
             <Text style={styles.scoreText}>Score: {score}</Text>
           </View>
+          <VoiceRecorder />
         </View>
       </GameEngine>
     );
